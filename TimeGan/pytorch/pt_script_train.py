@@ -355,12 +355,10 @@ def main():
     torch.save(synth.supervisor,path_output+"supervisor.pt")
     torch.save(synth.discriminator,path_output+"discriminator.pt")
 
-    ############################################################
-
-   # synthetic_sample = np.asarray(synth_data)
-
-   # print(real_sample.shape)
-   # print(synth_data.shape)
+    #############################################################
 
 if __name__ == '__main__':
     main()
+#Credits goes to:
+# [Fabiana Clemented](synthetic-time-series-data-a-gan-approach) 
+# [Laxmi Tiwari](timegan-implementation-using-pytorch-in-stock-data)
