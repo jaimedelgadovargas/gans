@@ -15,8 +15,7 @@ from torchsummary import summary
 
 # Load and preprocess the data
 
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = torch.device("cuda")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def preprocess(data, seq_len):
     ori_data = data[::-1]
     scaler = MinMaxScaler().fit(ori_data)
@@ -42,9 +41,6 @@ class StockDataset(Dataset):
     def __getitem__(self, index):
         return torch.FloatTensor(self.data[index])
 
-###### TimeGan classes
-# 
-#
 
 class GRUNet(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim, n_layers):
@@ -261,8 +257,6 @@ class TimeGAN:
             x_h = self.recovery(self.generator(Z_.to(device))).cpu().detach().numpy()
             data.append(x_h)
         return np.array(np.vstack(data))        
-######################## main  
-#       
 def main():
     args = sys.argv[1:]
     print(args)
@@ -284,23 +278,7 @@ def main():
     train_steps = data["model_parameters"]["train_steps"]
 
     sample_size = data["model_parameters"]["sample_size"]
-    #device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    ''' 
-    batch_size = 128
-    learning_rate = 5e-4 
-    noise_dim = 32
-    dim = 128
-    input_dim = 6
-    model_parameters = (batch_size, learning_rate, 0.5, 0.5, noise_dim, 24, 2, (0, 1), dim)
-    hidden_dim = 24
-    seq_len = 24
-    n_layers = 3
-    n_seq = 6
-    gamma = 1
-    train_steps = 1#5000
-    sample_size = 3660
-    
-    '''
+
     df = pd.read_csv('../../../dataset/TimeGan/Google_BIG.csv')
     input_dim = n_seq
     n_layers = 3
@@ -355,7 +333,6 @@ def main():
     torch.save(synth.supervisor,path_output+"supervisor.pt")
     torch.save(synth.discriminator,path_output+"discriminator.pt")
 
-    #############################################################
 
 if __name__ == '__main__':
     main()
