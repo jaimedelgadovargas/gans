@@ -397,10 +397,9 @@ def main():
     np.save(path_output+"synthetic_samplenpy",synthetic_sample)
     np.save(path_output+"real_samplenpy",real_sample)
     print("Files saved: real_sample.csv, synthetic_sample.csv, synthetic_samplenpy.csv, real_samplenpy.csv")
-   # synthetic_sample = np.asarray(synth_data)
-
-   # print(real_sample.shape)
-   # print(synth_data.shape)
 
 if __name__ == '__main__':
-    main()
+    main()    
+#Credits goes to:
+# [Fabiana Clemented](synthetic-time-series-data-a-gan-approach) 
+# [Laxmi Tiwari](timegan-implementation-using-pytorch-in-stock-data)
