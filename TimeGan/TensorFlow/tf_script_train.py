@@ -410,3 +410,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+#Full credits goes to [Fabiana Clemented](https://towardsdatascience.com/synthetic-time-series-data-a-gan-approach-869a984f2239) for this implementation.<br>
+#Paper on [TimeGAN](https://papers.nips.cc/paper/2019/file/c9efe5f26cd17ba6216bbe2a7d26d490-Paper.pdf)
+#[Credit to Alin Cijov - Stocks Generate Synthetic Data TimeGAN]

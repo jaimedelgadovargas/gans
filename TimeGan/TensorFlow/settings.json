@@ -1,8 +1,9 @@
 {
   "version": 1,
   "paths": {
-    "dataset": "../../../dataset/TimeGan/Google_BIG.csv",
-    "output": "./output_stock/"
+    "dataset": "Google_BIG.csv",
+    "output": "output_stock/",
+    "input": "output_stock/"
   },
   "model_parameters": {
   "seq_len": 24,

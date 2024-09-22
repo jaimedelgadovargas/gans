@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "paths": {
+    "dataset": "energy_data.csv",
+    "output": "output_energy/",
+    "input": "output_energy/"
+  },
+  "model_parameters": {
+  "seq_len": 24,
+  "n_seq": 28,
+  "hidden_dim": 24,
+  "gamma": 1,
+  "noise_dim": 32,
+  "dim":  128,
+  "batch_size": 128,
+  "log_step": 100,
+  "learning_rate": 5e-4,
+  "train_steps": 10,
+  "sample_size": 1152
+  }
+}
